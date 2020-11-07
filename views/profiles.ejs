@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Yo</title>
+
+    <style>
+      body {
+        background-color: skyblue;
+        font-family: verdana;
+        color: white;
+        padding: 30px;
+      }
+      h1 {
+        font-size: 48px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      p {
+        font-size: 16px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        font-size: 30px;
+      }
+      li {
+        text-align: center;
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+     <%- include ('partials/nav') %> 
+    <h1>Yo <%= person %></h1>
+    <p>Shut the fuck up! You're a fucking cunt! suck my dick</p>
+    <p>
+      <strong> <%= data.age %> years old </strong>
+    </p>
+    <p>
+      <strong> Job: <%= data.job %> </strong>
+    </p>
+
+    <h2>Hobbies</h2>
+    <ul>
+      <% data.hobbies.forEach(function(item){ %>
+      <li><%= item %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
